@@ -41,6 +41,8 @@ public class JettyEmbedServer {
 
     public void start() throws Exception {
         try {
+            System.out.println("port="+this.port);
+            System.out.println("webbase="+this.webBase);
             Resource configXml = Resource.newSystemResource(jettyConf);
             String fileContent = InputStreamTOString(configXml.getInputStream(), "UTF-8");
             fileContent = fileContent.replaceFirst("\\$\\{port\\}", String.valueOf(port));
@@ -53,7 +55,7 @@ public class JettyEmbedServer {
                 WebAppContext webAppContext = (WebAppContext) handler;
                 URL url = JettyEmbedServer.class.getResource(webBase);
                 if (url==null){
-                    System.out.println("can't find "+webBase+"in claspath!");
+                    System.out.println("can't find "+this.webBase+" in claspath!");
                     System.exit(0);
                 }
                 webAppContext.setResourceBase(url.toString());

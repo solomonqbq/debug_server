@@ -15,6 +15,9 @@
                 s.start();
             }
         }
+### Step 3:
+    把包含webapp目录的目录加到classpath里，通常是main或main/resources
 
 
-### GO GO!
+### Step 4:
+    debug GO GO!
