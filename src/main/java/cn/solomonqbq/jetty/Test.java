@@ -8,6 +8,8 @@ public class Test {
         JettyEmbedServer s = new JettyEmbedServer();
         s.setPort(80);
         s.setWebBase("/webapp");
+
+
         s.start();
     }
 }
