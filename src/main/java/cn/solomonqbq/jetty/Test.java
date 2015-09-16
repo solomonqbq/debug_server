@@ -11,7 +11,7 @@ public class Test {
 
         s.setWebBase("/webapp");
 
-
+        System.out.println("sdfdsfsldfdsfa");
         s.start();
     }
 }
