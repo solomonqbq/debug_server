@@ -7,6 +7,8 @@ public class Test {
     public static void main(String[] args) throws Exception {
         JettyEmbedServer s = new JettyEmbedServer();
         s.setPort(80);
+
+
         s.setWebBase("/webapp");
 
 
